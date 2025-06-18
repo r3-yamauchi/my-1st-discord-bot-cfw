@@ -1,0 +1,34 @@
+# Cloudflare Workers設定ファイル
+# このファイルは、Cloudflare Workersへのデプロイに必要な設定を定義します
+
+# Workerの名前（Cloudflareダッシュボードに表示される名前）
+name = "my-1st-discord-bot"
+
+# エントリーポイント（TypeScriptファイルを指定）
+main = "src/index.ts"
+
+# 互換性日付（使用するCloudflare Workersランタイムのバージョンを指定）
+# この日付以降に追加された機能が利用可能になります
+compatibility_date = "2024-06-18"
+
+# 互換性フラグの設定
+# nodejs_compatフラグを使用してNode.js APIのサポートを有効化
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+# 環境変数の設定セクション
+# ここで定義した変数は、Worker内でprocess.envまたはenv経由でアクセス可能
+
+# 開発環境での環境変数は.dev.varsファイルに設定してください
+# .dev.varsファイルの例:
+# DISCORD_APPLICATION_ID = "あなたのアプリケーションID"
+# DISCORD_PUBLIC_KEY = "あなたの公開鍵"
+# DISCORD_BOT_TOKEN = "あなたのボットトークン"
+
+# 本番環境では以下のコマンドで設定:
+# wrangler secret put DISCORD_APPLICATION_ID
+# wrangler secret put DISCORD_PUBLIC_KEY
+# wrangler secret put DISCORD_BOT_TOKEN
+
+[observability.logs]
+enabled = true

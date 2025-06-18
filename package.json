@@ -1,0 +1,28 @@
+{
+  "name": "my-1st-discord-bot-cfw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "register": "node scripts/register-commands.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "discord-hono": "^0.19.3",
+    "hono": "^4.8.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250617.0",
+    "discord-api-types": "^0.38.12",
+    "discord.js": "^14.20.0",
+    "dotenv": "^16.5.0",
+    "typescript": "^5.8.3",
+    "wrangler": "^4.20.1"
+  }
+}
