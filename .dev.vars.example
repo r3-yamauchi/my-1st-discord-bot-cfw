@@ -1,0 +1,4 @@
+# Discord Bot Configuration
+DISCORD_APPLICATION_ID=your-application-id-here
+DISCORD_PUBLIC_KEY=your-public-key-here
+DISCORD_BOT_TOKEN=your-bot-token-here
